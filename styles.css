@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    color: #3b3b3b;
+    margin-bottom: 40px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Highlight selected cell */
+.selected {
+    background-color: #ffcc80 !important;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Toolbar Styles */
+#toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    background: #f0f0f0;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* Toolbar Buttons */
+#toolbar button {
+    background-color: #e3e3e3;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#toolbar button:hover {
+    background-color: #d6d6d6;
+}
+
+/* Toolbar Input Fields */
+#toolbar input[type="text"],
+#toolbar input[type="color"],
+#toolbar input[type="range"] {
+    height: 20px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 2px solid #4d4d4d;
+}
+
+/* Font Size Slider */
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for color input */
+input[type="color"] {
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    /* Make the input field itself round */
+    padding: 0;
+}
+
+/* Custom styling for color input in WebKit browsers */
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 50%;
+    /* Make the color swatch (preview) round */
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+/* Find & Replace Input Fields */
+#toolbar input[type="text"] {
+    width: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"],
+    input[type="color"],
+    input[type="range"],
+    button {
+        width: 100%;
+    }
+}
+

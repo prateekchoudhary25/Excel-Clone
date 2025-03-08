@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <h2>Excel Clone</h2>
+
+    <!-- Toolbar with buttons -->
+    <div id="toolbar">
+        <button id="resetBtn"><i class="fas fa-undo"></i>Selection</button>
+        <button id="trimBtn"><i class="fas fa-cut"></i> Trim</button>
+        <button id="upperBtn"><i class="fas fa-arrow-up"></i> Uppercase</button>
+        <button id="lowerBtn"><i class="fas fa-arrow-down"></i> Lowercase</button>
+        <button id="removeDuplicatesBtn"><i class="fas fa-ban"></i>Duplicates</button>
+        <button id="addRowBtn"><i class="fas fa-plus-square"></i>Row</button>
+        <button id="deleteRowBtn"><i class="fas fa-minus-square"></i> Row</button>
+        <button id="addColumnBtn"><i class="fas fa-plus-square"></i> Column</button>
+        <button id="deleteColumnBtn"><i class="fas fa-minus-square"></i> Column</button>
+        <button id="boldBtn"><i class="fas fa-bold"></i> </button>
+        <button id="italicBtn"><i class="fas fa-italic"></i> </button>
+        <label for="fontSizeSlider">Font Size</label>
+        <input type="range" id="fontSizeSlider" min="12" max="30" value="12" step="2">
+        <span id="fontSizeValue">12px</span>
+        <input type="color" id="fontColorPicker" value="#fa0707">
+    </div>
+    <div id="toolbar">
+        <input type="text" id="operationInput" placeholder="SUM, MIN, MAX, COUNT">
+        <button id="operationBtn"><i class="fas fa-calculator"></i> Perform Operation</button>
+        <input type="text" id="findInput" placeholder="Find">
+        <input type="text" id="replaceInput" placeholder="Replace">
+        <button id="findReplaceBtn"><i class="fas fa-search"></i> Find & Replace</button>
+
+    </div>
+
+    <!-- Table -->
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th id="header1" contenteditable="true" class="header" data-id="header1"></th>
+                <th id="header2" contenteditable="true" class="header" data-id="header2">A</th>
+                <th id="header3" contenteditable="true" class="header" data-id="header3">B</th>
+                <th id="header4" contenteditable="true" class="header" data-id="header4">C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-id="A1" contenteditable="true">1</td>
+                <td data-id="B1" contenteditable="true">20</td>
+                <td data-id="C1" contenteditable="true">30</td>
+                <td data-id="D1" contenteditable="true">40</td>
+            </tr>
+            <tr>
+                <td data-id="A2" contenteditable="true">2</td>
+                <td data-id="B2" contenteditable="true">60</td>
+                <td data-id="C2" contenteditable="true">70</td>
+                <td data-id="D2" contenteditable="true">80</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
