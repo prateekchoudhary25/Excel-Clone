@@ -1,6 +1,6 @@
-# Web Application Mimicking Google Sheets
+# Web Application Mimicking Excel
 
-An interactive table that mimics basic spreadsheet functionalities such as those found in Google Sheets. It includes features like editable cells, dynamic data operations, and customizable table settings.
+An interactive table that mimics basic spreadsheet functionalities such as those found in Misrosoft Excel. It includes features like editable cells, dynamic data operations, and customizable table settings.
 
 ## Features
 
